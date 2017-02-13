@@ -13,10 +13,34 @@
         </div>
         <div class="col-4 ouput">
           <!--Razor Code-->
-          @foreach(var number in Model)
-          {
-            @number<br>
-          }
+          <div class="results">
+            <h1>Results</h1><br>
+            @foreach(var number in Model)
+            {
+              if(number == "ping")
+              {
+                <div class="ping">
+                  <h1>@number</h1>
+                </div>
+              }
+              else if(number == "pong")
+              {
+                <div class="pong">
+                  <h1>@number</h1>
+                </div>
+              }
+              else if (number == "ping-pong")
+              {
+                <div class="ping-pong">
+                  <h1>@number</h1>
+                </div>
+              }
+              else
+              {
+                <h1>@number</h1><br>
+              }
+            }
+          </div>
         </div>
         <div class="col-4">
         </div>

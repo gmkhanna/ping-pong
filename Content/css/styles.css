@@ -1,12 +1,77 @@
+@keyframes rightToLeft {
+  from {right: 0;}
+  to {right: 90%;}
+}
+
+@keyframes rightToLeftOutput {
+  from {right: 0;}
+  to {right: 50%;}
+}
+
+@keyframes leftToRightOutput {
+  from {right: 0;}
+  to {right: -50%;}
+}
+
+@keyframes downToUp {
+  from {    transform: rotate(0deg); }
+  to {   transform: rotate(90deg); }
+}
+
+
 body {
   background-color: black;
   color: white;
 }
 
 button {
+  position: relative;
   color: black;
+  animation-name: rightToLeft;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
 }
 
 input {
   color: black;
+  position: absolute;
+}
+
+.input-bar {
+  width: 300px;
+  animation-name: downToUp;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+}
+
+button:hover {
+
+}
+
+.row {
+  margin-top: 30%;
+}
+
+.results {
+  text-align: center;
+  margin-bottom: 15%;
+  width: 100%;
+}
+
+.ping {
+  position: relative;
+  animation-name: rightToLeftOutput;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+}
+
+.pong {
+  position: relative;
+  animation-name: leftToRightOutput;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+}
+
+.ping-pong h1 {
+  font-size: 60px !important;
 }

@@ -4,17 +4,21 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="../Content/css/styles.css">
+    <script src="../Content/js/jquery-3.1.1.js"  charset="utf-8"></script>
+    <script src="../Content/js/scripts.js" charset="utf-8"></script>
     <title>Ping Pong</title>
   </head>
   <body>
     <div class="container">
       <div class="row">
         <form action="/ping-pong" method="post">
-          <div class="col-md-9">
-            <input type="number" name="number">
+          <div class="col-md-9 input-div">
+            <div class="input-bar">
+              <input class="form-control" type="number" name="number" placeholder="Input a number" required>
+            </div>
           </div>
           <div class="col-md-3">
-            <button type="submit">Go!</button>
+            <button class="btn btn-secondary" type="submit">Go!</button>
           </div>
         </form>
       </div>
